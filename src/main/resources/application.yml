@@ -1,0 +1,26 @@
+
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+
+  application:
+    name: ems
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/stu_management?characterEncoding=UTF-8
+    username: root
+    password: 662828
+
+server:
+  port: 8089
+  servlet:
+    context-path: /stu_management
+
+    jsp:
+      init-parameters:
+        development: true
+mybatis:
+  mapper-locations: classpath:com/jarico/ems/mapper/*.xml
+  type-aliases-package: com.jarico.entity
